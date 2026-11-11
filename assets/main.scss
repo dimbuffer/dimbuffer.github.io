@@ -1,0 +1,145 @@
+---
+---
+
+// 中文优先用系统字体，不依赖外部字体服务。
+$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Noto Sans CJK SC", "Source Han Sans SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+$base-font-size: 17px;
+$base-line-height: 1.75;
+$text-color: #1f2328;
+$background-color: #ffffff;
+$brand-color: #1d4f91;
+$grey-color: #57606a;
+$content-width: 760px;
+
+@import "minima";
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+
+// minima 默认给标题加了负字距，中文会挤在一起。
+.site-title,
+.post-title,
+.page-heading,
+.footer-heading {
+  letter-spacing: 0;
+}
+
+.site-title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  max-width: calc(100% - 3.5rem);
+}
+
+.post-title {
+  font-size: 1.85rem;
+  line-height: 1.35;
+}
+
+.page-heading {
+  line-height: 1.35;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.post-content {
+  overflow-wrap: break-word;
+
+  p,
+  li {
+    line-height: 1.85;
+  }
+
+  h2,
+  h3,
+  h4 {
+    margin-top: 1.4em;
+  }
+}
+
+blockquote {
+  letter-spacing: 0;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: $text-color;
+  background-color: #f6f8fa;
+  border-left: 4px solid $brand-color;
+  padding: 0.15rem 0 0.15rem 1rem;
+}
+
+pre,
+code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", "Sarasa Mono SC", "Noto Sans Mono CJK SC", "PingFang SC", "Microsoft YaHei", monospace;
+}
+
+.post-tags,
+.tag-index {
+  .tag {
+    display: inline-block;
+    margin: 0 0.35rem 0.25rem 0;
+    padding: 0 0.45rem;
+    border: 1px solid #d0d7de;
+    border-radius: 3px;
+    color: #424a53;
+    background: #f6f8fa;
+    font-size: 13px;
+    line-height: 1.7;
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:visited {
+      color: $brand-color;
+      border-color: $brand-color;
+      text-decoration: none;
+    }
+  }
+}
+
+.post-tags {
+  margin: 0 0 0.6rem;
+  line-height: 1.8;
+}
+
+.post-list .post-tags {
+  margin-top: -0.15rem;
+}
+
+.tag-index {
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding: 0;
+
+  li {
+    display: inline-block;
+    margin: 0 0.75rem 0.4rem 0;
+  }
+}
+
+.tag-count {
+  color: $grey-color;
+  font-size: 13px;
+}
+
+.tag-group {
+  time {
+    display: inline-block;
+    min-width: 6.5em;
+    margin-right: 0.5em;
+    color: $grey-color;
+    font-variant-numeric: tabular-nums;
+  }
+}

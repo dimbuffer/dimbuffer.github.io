@@ -1,0 +1,46 @@
+# dimbuffer 的技术笔记
+# 新增笔记不用改这个文件，把 Markdown 放到 _posts/ 即可。
+
+title: dimbuffer 的技术笔记
+description: dimbuffer 的公开笔记本，记录技术成长和踩坑。
+author: dimbuffer
+lang: zh-CN
+timezone: Etc/UTC
+
+url: https://dimbuffer.github.io
+baseurl: ""
+
+github_username: dimbuffer
+rss: 订阅
+
+show_excerpts: true
+
+minima:
+  date_format: "%Y-%m-%d"
+
+header_pages:
+  - index.md
+  - about.md
+
+theme: minima
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle
